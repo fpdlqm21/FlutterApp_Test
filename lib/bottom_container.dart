@@ -37,11 +37,13 @@ class BottomContainer extends StatelessWidget {
           children: [
             SizedBox(height: 30.0),
             Text(
-              '엎드림',
+              '장시간 누운자세',
               style: TextStyle(fontSize: 18.0),
             ),
-            SizedBox(height: 50.0),
-            Text('경과시간', style: TextStyle(fontSize: 18.0))
+            SizedBox(height: 30.0),
+            Text('실내온도 조절필요', style: TextStyle(fontSize: 18.0)),
+            SizedBox(height: 30.0),
+            Text('우울감 개선필요', style: TextStyle(fontSize: 18.0))
           ],
         )
       ],

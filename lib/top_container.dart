@@ -39,11 +39,51 @@ class TopContainer extends StatelessWidget {
               onPressed: () {},
               icon: SvgPicture.asset('assets/icons/back.svg'),
               iconSize: isOver() ? verticalSize * 0.08 : 70),
-          SizedBox(),
+          SizedBox(
+            child: Text(
+              '3건',
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 50.0,
+                  color: Colors.red),
+            ),
+          ),
           IconButton(
               onPressed: () {},
               icon: SvgPicture.asset('assets/icons/front.svg'),
               iconSize: isOver() ? verticalSize * 0.08 : 70),
+        ],
+      );
+    }
+
+    Widget _stateImage() {
+      return Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          SizedBox(
+            width: 10.0,
+          ),
+          SvgPicture.asset(
+            'assets/icons/bedsore.svg',
+            width: 80,
+            height: 80,
+          ),
+          SizedBox(
+            width: 10.0,
+          ),
+          SvgPicture.asset(
+            'assets/icons/temperature.svg',
+            width: 80,
+            height: 80,
+          ),
+          SvgPicture.asset(
+            'assets/icons/sed_black.svg',
+            width: 80,
+            height: 80,
+          ),
+          SizedBox(
+            width: 10.0,
+          ),
         ],
       );
     }
@@ -58,6 +98,7 @@ class TopContainer extends StatelessWidget {
       child: Column(children: [
         _textEidget(),
         _statIcon(),
+        _stateImage(),
       ]),
     );
   }
